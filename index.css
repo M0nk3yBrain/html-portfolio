@@ -1,0 +1,43 @@
+html {
+    background-color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.headernav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .1rem;
+    font-size: 1rem;
+}
+
+.item {
+    flex: 2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+    .column1,
+    .column2 {
+        width: 100%;
+    }
+}
+
+.columns-container {
+    display: flex;
+    justify-content: space-between 1rem;
+}
+
+.column1,
+.column2 {
+    flex-basis: 48%;
+}
