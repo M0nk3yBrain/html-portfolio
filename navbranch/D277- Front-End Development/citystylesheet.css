@@ -1,0 +1,155 @@
+style * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar.
+The following is the start of the topnav styling. */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#emote {
+  width: 20px;
+  height: 15px;
+}
+/*Style img
+The following is the styling of the img banner*/
+img {
+  width: 100%;
+  height: 300px;
+}
+/* Create three unequal columns that floats next to each other 
+The following is the tyling of the overall format*/
+.column {
+  float: left;
+  padding: 40px;
+}
+
+/* Top left, middle and right column */
+.column.top.side {
+  width: 33%;
+}
+
+.column.top.middle {
+  width: 20%;
+}
+/*Style Middle collumn 
+*/
+.column.middle {
+  width: calc(100%-40px);
+  flex: 1;
+}
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.top.side,
+  .column.top.middle {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column.middle.side,
+  .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+footer {
+  background-color: #9e9e9e;
+  padding: 10px;
+  text-align: center;
+  width: calc(100%-10px);
+}
+/*Style the Table
+The following is the begging of the individual styling of the page content*/
+#infoTable {
+  font-size: auto;
+  color: rgb(0, 0, 0);
+  border: 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+td {
+  border: 1px solid;
+  padding: 2px;
+}
+
+/*Style Headers*/
+h2 {
+  text-align: center;
+}
+#headerthingstodo {
+  text-transform: capitalize;
+}
+/*Style for the Aside*/
+aside {
+  text-align: center;
+}
+/*
+#listquicklinks {
+  padding-left: 5%;
+}
+*/
+ul.qlist {
+  list-style-type: none;
+}
+
+/*Style things to do headers*/
+#headerthingstodo {
+  font-size: x-large;
+  color: rgb(32, 32, 160);
+}
+
+#thingstodo {
+  text-align: center;
+  font-size: medium;
+}
+
+/*Style Things lists*/
+#listheader {
+  text-decoration: underline;
+  font-size: xx-large;
+  color: rgb(32, 32, 160);
+}
+#thingslist {
+  text-align: justify;
+  border-radius: 30px;
+  border: solid 8px rgb(32, 32, 160);
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="portal.css" />
+
+    <!--Beggining of the Validation Script-->
+    <script>
+      function checkEmail(form) {
+        email = form.email.value;
+        verifyemail = form.verifyemail.value;
+
+        //If Password Not Entered
+        if (email == "") alert("Please Enter Email");
+        //If Confirm Password Not Entered
+        else if (verifyemail == "") alert("Please enter confirm Email");
+        //If NOT Same Return False.
+        else if (email != verifyemail) {
+          alert("\nEmail did not match: Please try again...");
+          return false;
+        }
+
+        //If same return True.
+        else {
+          alert("\nEmail Match: Welcome to Resident Portal");
+        }
+      }
+    </script>
+    <!--Script for redirct to State-->
+
+    <script type="text/javascript">
+      document.getElementById("myButton").onclick = function () {
+        location.href = "StateRevised";
+      };
+    </script>
+  </head>
+  <!--Start of Body -->
+  <body>
+    <h1>Registration Portal</h1>
+    <hr />
+    <br />
+    <form onsubmit="return checkEmail(this)">
+      <table id="portalTable">
+        <tr>
+          <td>First Name:</td>
+          <td>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Enter First Name"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td>
+            <input type="text" name="lastName" placeholder="Enter Last Name" />
+          </td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="email" name="email" placeholder="Email" /></td>
+        </tr>
+        <tr>
+          <td>Verify Email:</td>
+          <td>
+            <input type="email" name="verifyemail" placeholder="Verify Email" />
+          </td>
+        </tr>
+        <tr>
+          <td>Questions:</td>
+          <td>
+            <textarea
+              type="Questions"
+              placeholder="Type any questions you have here."
+            ></textarea>
+          </td>
+        </tr>
+        <!--Button-->
+        <tr>
+          <td colspan="2">
+            <button type="submit" onclick="checkEmail()">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <!--Start of Footer-->
+    <footer>
+      <button onclick="history.back()">Go Back</button>
+    </footer>
+  </body>
+</html>

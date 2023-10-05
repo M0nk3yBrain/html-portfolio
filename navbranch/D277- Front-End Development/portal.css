@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+/* Header */
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: forestgreen;
+}
+
+/* Table */
+
+#portalTable {
+  border: solid 2px;
+  border-color: black;
+  border-radius: 12px;
+  padding: 2%;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+form {
+  display: inline-block;
+}
+
+td {
+  border: solid 1px;
+  border-color: gray;
+  background-color: white;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 12px;
+}
