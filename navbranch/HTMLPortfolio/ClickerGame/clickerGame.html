@@ -9,6 +9,8 @@
     <body>
         <canvas id="mycanvas" width="100" height="200"></canvas>
         <button id="addScore">Push Me</button>
+        <button id="upgrade5">Upgrade +5</button>
+        <button id="upgrade10">Upgrade +10</button>
         <script src="clickerGame.js"></script>
         <script>
             var canvas = document.getElementById("mycanvas");
@@ -18,6 +20,8 @@
             drawNumber(score, ctx, canvas);
 
             addScore.addEventListener("click", updateNumber);
+            upgrade5.addEventListener("click", upgradeScore5);
+            upgrade10.addEventListener("click", upgradeScore10);
         </script>
     </body>
 </html>
