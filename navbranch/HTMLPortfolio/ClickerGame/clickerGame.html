@@ -2,26 +2,53 @@
 <html>
     <head>
         <meta charset="utf-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale-1"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <title>Clicker Game</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <canvas id="mycanvas" width="100" height="200"></canvas>
-        <button id="addScore">Push Me</button>
-        <button id="upgrade5">Upgrade +5</button>
-        <button id="upgrade10">Upgrade +10</button>
+        <header>Clicker Game</header>     
+            <div class="sidebar">
+                <ul>
+                    <li id="upgrade1" onclick="upgradeScore1()">
+                        <p>
+                            <span class="icon">&#49;</span>
+                            <span class="text">1 points per click | Cost: 10</span>
+                        </p>
+                    </li>
+                    <li id="upgrade2" onclick="upgradeScore2()">
+                        <p>
+                            <span class="icon">&#50;</span>
+                            <span class="text">2 points per click | Cost: 100</span>
+                        </p>
+                    </li>
+                    <li id="upgrade5" onclick="upgradeScore5()">
+                        <p>
+                            <span class="icon">&#53;</span>
+                            <span class="text">5 points per click | Cost: 1,000</span>
+                        </p>
+                    </li>
+                    <li id="upgrade10" onclick="upgradeScore10()">
+                        <p>
+                            <span class="icon">&#49;&#48;</span>
+                            <span class="text">10 points per click | Cost: 10,000</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div id="info">
+                <p>Score: <span id="showScore" class="number">0</span></p>
+                <p>Points Per Click: <span id="showPointsPerClick" class="number">1</span></p>
+                <p id="gameOver"></p>
+                <img src="button.png" id="addScore" onclick="updateNumber()">
+            </div>
         <script src="clickerGame.js"></script>
         <script>
-            var canvas = document.getElementById("mycanvas");
-            var ctx = canvas.getContext("2d");
-            var addScore = document.getElementById("addScore");
-
-            drawNumber(score, ctx, canvas);
-
-            addScore.addEventListener("click", updateNumber);
-            upgrade5.addEventListener("click", upgradeScore5);
-            upgrade10.addEventListener("click", upgradeScore10);
+            /*
+            addScore.addEventListener("mousedown", startUpdating);
+            addScore.addEventListener("mouseup", stopUpdating);
+            addScore.addEventListener("mouseleave", stopUpdating);
+            */
         </script>
     </body>
 </html>
