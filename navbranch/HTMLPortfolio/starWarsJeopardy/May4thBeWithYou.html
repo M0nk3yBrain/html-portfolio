@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <title>Star Wars Jeopardy</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <div class="gridContainer">
+            <div class="gridItem">1</div>
+            <div class="gridItem">2</div>
+            <div class="gridItem">3</div>
+            <div class="gridItem">4</div>
+            <div class="gridItem">5</div>
+            <div class="gridItem">6</div>
+            <div class="gridItem">7</div>
+            <div class="gridItem">8</div>
+            <div class="gridItem">9</div>
+            <div class="gridItem">10</div>
+            <div class="gridItem">11</div>
+            <div class="gridItem">12</div>
+        </div>
+    <!--
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styles for the popup */
+        #popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        #popup {
+            width: 300px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 100px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styles for the question and answer choices */
+        #question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showPopup()">Show Popup</button>
+
+    <div id="popup-container">
+        <div id="popup">
+            <div id="question">What is 2 + 2?</div>
+            <label class="answer" onclick="checkAnswer(4)">
+                <input type="radio" name="answer" value="4"> 4
+            </label>
+            <label class="answer" onclick="checkAnswer(3)">
+                <input type="radio" name="answer" value="3"> 3
+            </label>
+            <label class="answer" onclick="checkAnswer(5)">
+                <input type="radio" name="answer" value="5"> 5
+            </label>
+            <label class="answer" onclick="checkAnswer(6)">
+                <input type="radio" name="answer" value="6"> 6
+            </label>
+            <button onclick="closePopup()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup-container').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-container').style.display = 'none';
+        }
+
+        function checkAnswer(correctAnswer) {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer && parseInt(selectedAnswer.value) === correctAnswer) {
+                alert('Correct!');
+            } else {
+                alert('Incorrect. Please try again.');
+            }
+            closePopup();
+        }
+    </script>
+</body>
+</html>
+<body>
+    <button onclick="showPopup()">Show Popup</button>
+
+    <div id="popup-container">
+        <div id="popup">
+            <div id="question"></div>
+            <div id="answers"></div>
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is 2 + 2?",
+                answers: ["4", "3", "5", "6"],
+                correctAnswer: 0
+            },
+            {
+                question: "What is the capital of France?",
+                answers: ["Berlin", "Madrid", "Paris", "Rome"],
+                correctAnswer: 2
+            },
+            // Add more questions and answers as needed
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function showPopup() {
+            const questionElement = document.getElementById('question');
+            const answersElement = document.getElementById('answers');
+            questionElement.textContent = questions[currentQuestionIndex].question;
+            answersElement.innerHTML = "";
+
+            questions[currentQuestionIndex].answers.forEach((answer, index) => {
+                const label = document.createElement('label');
+                label.className = 'answer';
+                label.onclick = () => selectAnswer(index);
+
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'answer';
+                radio.value = index;
+
+                label.appendChild(radio);
+                label.appendChild(document.createTextNode(answer));
+                answersElement.appendChild(label);
+            });
+
+            document.getElementById('popup-container').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-container').style.display = 'none';
+        }
+
+        function selectAnswer(index) {
+            questions[currentQuestionIndex].selectedAnswer = index;
+        }
+
+        function checkAnswer() {
+            const selectedAnswer = questions[currentQuestionIndex].selectedAnswer;
+            const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+
+            if (selectedAnswer === correctAnswer) {
+                alert('Correct!');
+            } else {
+                alert('Incorrect. The correct answer is: ' + questions[currentQuestionIndex].answers[correctAnswer]);
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                showPopup();
+            } else {
+                closePopup();
+            }
+        }
+    </script>
+</body>
+</html>
+-->
+    </body>
