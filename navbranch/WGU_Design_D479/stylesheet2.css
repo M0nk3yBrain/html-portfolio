@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(251, 206, 160);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body .absolute {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+body .absolute #banner {
+    z-index:-1;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0;
+    top: 0;
+}
+
+body .absolute .header {
+    background-color: rgb(44, 44, 44);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    margin-top: 2rem;
+    width: 100%;
+    left: 0;
+}
+
+body .absolute .header header {
+    font-size: 4rem;
+    font-style: italic;
+    color: white;
+    padding-left: 2rem;
+    flex: auto;
+}
+
+body .absolute .header #logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 2rem;
+    height: 100px;
+    padding-top: 0.75rem;
+    flex: auto;
+}
+
+body .absolute .header nav {
+    text-align: center;
+}
+
+body .absolute .header nav #ql {
+    color: gold;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    border: 2.5px solid white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.container {
+    position: absolute;
+    top: 450px;
+    width: calc(100% - 13rem);
+    margin: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border: .5rem solid #43a0fd;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .column{
+    text-align: center;
+}
+
+.container .column img {
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+    border: black solid 1px;
+    border-radius: 20px;
+}
+
+.container .column h3{
+    font-size: 32px;
+    font-style: italic;
+}
+
+.container .column p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+      flex-direction: row;
+    }
+
+    .column {
+        width: calc(50% - 2rem);
+        margin: 1rem;
+    }
+  }

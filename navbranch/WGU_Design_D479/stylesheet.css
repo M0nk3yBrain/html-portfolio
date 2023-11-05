@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(251, 206, 160);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body .absolute {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+body .absolute #banner {
+    z-index:-1;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0;
+    top: 0;
+}
+
+body .absolute .header {
+    background-color: rgb(44, 44, 44);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    margin-top: 2rem;
+    width: 100%;
+    left: 0;
+}
+
+body .absolute .header header {
+    font-size: 4rem;
+    font-style: italic;
+    color: white;
+    padding-left: 2rem;
+    flex: auto;
+}
+
+body .absolute .header #logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 2rem;
+    height: 100px;
+    padding-top: 0.75rem;
+    flex: auto;
+}
+
+body .absolute .header nav {
+    text-align: center;
+}
+
+body .absolute .header nav #ql {
+    color: gold;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    border: 2.5px solid white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+body .container {
+    position: absolute;
+    top: 450px;
+    width: 100%;
+}
+
+body .container h2 {
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: underline 3px black;
+}
+
+body .container div #about {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #43a0fd;
+    font-size: 1.2rem;
+    border: 2px solid #43a0fd;
+    border-radius: 25px;
+    background-color: white;
+    font-weight: bolder;
+}
+
+body .container2 {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    padding-left: 4rem;
+    padding-right: 20rem;
+    border: 4px solid #43a0fd;
+    border-radius: 25px;
+    background-color: white;
+}
+
+body .container .container2 .column h3 {
+    font-size: 2.25rem;
+    text-decoration: underline;
+}
+
+body .container .container2 aside {
+    position: absolute;
+    flex: auto;
+    border: 2px solid #43a0fd;
+    border-radius: 25px;
+    background-color: rgb(251, 206, 160);
+    right: 0;
+    top: 5;
+    margin: 2rem;
+    margin-right: 5rem;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+body .container .container2 aside h4 {
+    font-size: 1.7rem;
+    text-align: center;
+    text-decoration: underline;
+    color: #43a0fd;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+body .container .container2 aside ul {
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+body .container .container2 aside ul li {
+    list-style-type: none;
+    padding-right: .5rem;
+    font-size: 1.2rem;
+}
+
+body .container .container2 aside ul li a{
+    color: black;
+}
+
+body .container .display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .container .display .cards {
+    margin: 3rem;
+    display: flex;
+}
+
+body .container .display .cards .card img {
+    height: 22rem;
+    width: 22rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    object-fit: cover;
+    margin: 0 2rem;
+}
