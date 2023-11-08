@@ -65,6 +65,7 @@ body .absolute .header nav #ql {
     top: 450px;
     width: calc(100% - 13rem);
     margin: 2rem;
+    margin-bottom: 1000px;
     padding-left: 4rem;
     padding-right: 4rem;
     border: .5rem solid #43a0fd;
@@ -77,6 +78,7 @@ body .absolute .header nav #ql {
 
 .container .column{
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .container .column img {
@@ -107,3 +109,20 @@ body .absolute .header nav #ql {
         margin: 1rem;
     }
   }
+
+footer {
+    background-color: seagreen;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    columns: 2;
+    width: 100%;
+    padding-top: 10px;
+    height: 10px;
+    transition: 1s;
+    display: flex;
+}
+
+footer:hover {
+    height: 130px;
+}
